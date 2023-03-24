@@ -27,9 +27,9 @@ function shuffle(array) {
 const PokeCards = () => {
 	const [pokemons, setPokemons] = useState(pokemonData);
 	const [score, setScore] = useState(0);
+	const [highScore, setHighScore] = useState(0);
 
 	const handleGame = (id) => {
-		console.log(pokemons);
 		pokemons.forEach((poke) => {
 			if (poke.id === id) {
 				if (poke.isClicked === false) {
@@ -38,10 +38,13 @@ const PokeCards = () => {
 							pokemon.id === id ? { ...pokemon, isClicked: true } : pokemon
 						)
 					);
-					setScore((prevScore) => prevScore + 1);
-
-					setPokemons((prevPokemons) => shuffle(prevPokemons));
+					if (score !== 12) {
+						setScore((prevScore) => prevScore + 1);
+						setPokemons((prevPokemons) => shuffle(prevPokemons));
+					} else {
+					}
 				} else {
+					if (score > highScore) setHighScore(score);
 					setScore(0);
 					setPokemons(pokemonData);
 				}
@@ -49,13 +52,14 @@ const PokeCards = () => {
 		});
 		/* when the card is clicked, then check if that card was already clicked or not
 		if not then set the click property to true and increase score by 1
-		and if the card was already clicked then set score to 0 and display game over */
+		and if the card was already clicked then set score to 0 and reset pokemon data */
 	};
 
 	return (
 		<section className="mt-10">
-			<header className="flex justify-end w-[90%] m-auto">
-				<h2 className="text-3xl ml-auto">Score: {score}</h2>
+			<header className="flex justify-center gap-5">
+				<h2 className="text-3xl">Score: {score}</h2>
+				<h2 className="text-3xl">BestScore: {highScore}</h2>
 			</header>
 			<div className="flex flex-wrap justify-around mt-10">
 				{pokemons.map((poke) => (
