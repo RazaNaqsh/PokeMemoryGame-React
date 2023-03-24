@@ -1,4 +1,4 @@
-import PokeCards from "./components/PokeCards";
+import Game from "./components/Game";
 
 function App() {
 	return (
@@ -6,7 +6,7 @@ function App() {
 			<h1 className="text-center my-5 font-sans text-4xl text-[#22d3ee]">
 				Welcome to PokeMatch
 			</h1>
-			<PokeCards />
+			<Game />
 		</div>
 	);
 }
