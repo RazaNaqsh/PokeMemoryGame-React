@@ -1,16 +1,16 @@
 import { nanoid } from "nanoid";
-import articuno from "../assets/articuno.png";
-import bulbasaur from "../assets/bulbasaur.png";
-import dragonite from "../assets/dragonite.png";
-import entei from "../assets/entei.png";
-import lugia from "../assets/lugia.png";
-import magmar from "../assets/magmar.png";
-import moltres from "../assets/moltres.png";
-import onix from "../assets/onix.png";
-import pichu from "../assets/pichu.png";
-import pikachu from "../assets/pikachu.png";
-import umbreon from "../assets/umbreon.png";
-import zapdos from "../assets/zapdos.png";
+import articuno from "/assets/articuno.png";
+import bulbasaur from "/assets/bulbasaur.png";
+import dragonite from "/assets/dragonite.png";
+import entei from "/assets/entei.png";
+import lugia from "/assets/lugia.png";
+import magmar from "/assets/magmar.png";
+import moltres from "/assets/moltres.png";
+import onix from "/assets/onix.png";
+import pichu from "/assets/pichu.png";
+import pikachu from "/assets/pikachu.png";
+import umbreon from "/assets/umbreon.png";
+import zapdos from "/assets/zapdos.png";
 
 export const pokemonData = [
 	{
