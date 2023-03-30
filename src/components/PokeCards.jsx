@@ -1,12 +1,45 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const cardStyle =
 	"transparent-bg m-4 p-2 text-center text-xl border-4 rounded-lg  border-slate-600 hover:scale-95 active:scale-90 cursor-pointer transition-all duration-200 ease-in-out";
 
+const cardVariants = {
+	initial: {
+		opacity: 0,
+	},
+	view: {
+		opacity: 1,
+
+		transition: {
+			duration: 0.4,
+		},
+	},
+	hover: {
+		scale: 1.1,
+		transition: {
+			duration: 0.05,
+		},
+	},
+	tap: {
+		scale: 0.9,
+		transition: {
+			duration: 0.02,
+		},
+	},
+};
+
 const PokeCards = ({ pokemons, score, highScore, handleGame }) => {
 	return (
 		<>
-			<header className="text-shadow pt-10 flex justify-center gap-5 relative">
+			<motion.header
+				className="text-shadow pt-10 flex justify-center gap-5 relative"
+				initial={{ opacity: 0, x: -100 }}
+				whileInView={{ opacity: 1, x: 0 }}
+				transition={{
+					duration: 0.4,
+				}}
+			>
 				<div className="flex items-center  gap-4">
 					<h2 className="text-2xl md:text-4xl">Score: {score}</h2>
 					<h2 className="text-2xl md:text-4xl">BestScore: {highScore}</h2>
@@ -18,13 +51,25 @@ const PokeCards = ({ pokemons, score, highScore, handleGame }) => {
 						</button>
 					</Link>
 				</div>
-			</header>
-			<div className="flex flex-wrap justify-around md:mt-10 ">
+			</motion.header>
+			<motion.div
+				className="flex flex-wrap justify-around md:mt-10 "
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				transition={{
+					duration: 0.4,
+				}}
+			>
 				{pokemons.map((poke) => (
-					<div
+					<motion.div
 						key={poke.id}
 						className={cardStyle}
 						onClick={() => handleGame(poke.id)}
+						variants={cardVariants}
+						initial="initial"
+						whileInView="view"
+						whileHover="hover"
+						whileTap="tap"
 					>
 						<h1 className="text-[#fff] text-shadow text-sm md:text-xl">
 							{poke.name}
@@ -34,9 +79,9 @@ const PokeCards = ({ pokemons, score, highScore, handleGame }) => {
 							alt=""
 							className="h-[50px] w-[70px] sm:h-[80px] sm:w-[100px] object-contain md:h-auto md:w-auto"
 						/>
-					</div>
+					</motion.div>
 				))}
-			</div>
+			</motion.div>
 		</>
 	);
 };

@@ -1,8 +1,16 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const IntroScreen = () => {
 	return (
-		<div className="flex flex-col h-[100vh] items-center pt-20">
+		<motion.div
+			className="flex flex-col h-[100vh] items-center pt-20"
+			initial={{ opacity: 0, x: 100 }}
+			whileInView={{ opacity: 1, x: 0 }}
+			transition={{
+				duration: 0.4,
+			}}
+		>
 			<header className="mb-[20vh]">
 				<h1 className="text-shadow text-6xl font-extrabold  text-[#fff]">
 					Welcome to PokeMatch
@@ -34,7 +42,7 @@ const IntroScreen = () => {
 					</Link>
 				</div>
 			</main>
-		</div>
+		</motion.div>
 	);
 };
 

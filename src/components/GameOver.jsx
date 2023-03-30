@@ -1,8 +1,14 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const GameOver = ({ handleClick }) => {
 	return (
-		<section className="font-sans font-light h-[600px] flex flex-col justify-center items-center gap-5">
+		<motion.section
+			className="font-sans font-light h-[600px] flex flex-col justify-center items-center gap-5"
+			initial={{ opacity: 0, y: -50 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.3 }}
+		>
 			<h1 className="text-shadow text-xl md:text-5xl">
 				Congrats! You reached Max score.
 			</h1>
@@ -21,7 +27,7 @@ const GameOver = ({ handleClick }) => {
 					</button>
 				</Link>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 

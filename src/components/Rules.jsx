@@ -1,8 +1,14 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Rules = () => {
 	return (
-		<div className="p-20 flex flex-col items-center">
+		<motion.div
+			className="p-20 flex flex-col items-center"
+			initial={{ opacity: 0, y: -100 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.4 }}
+		>
 			<section className="transparent-bg p-4 w-2/5">
 				<h1 className="text-shadow text-3xl text-center">Rules</h1>
 				<div className="text-[#fff]  text-xl p-8 space-y-5 font-sans font-medium">
@@ -28,7 +34,7 @@ const Rules = () => {
 					Go Back
 				</button>
 			</Link>
-		</div>
+		</motion.div>
 	);
 };
 
