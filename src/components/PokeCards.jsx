@@ -1,12 +1,23 @@
+import { Link } from "react-router-dom";
+
 const cardStyle =
-	"m-4  p-2 text-center text-xl border-2 border-blue-200 hover:scale-95 active:scale-90 cursor-pointer transition-all duration-200 ease-in-out";
+	"transparent-bg m-4 p-2 text-center text-xl border-4 rounded-lg  border-slate-600 hover:scale-95 active:scale-90 cursor-pointer transition-all duration-200 ease-in-out";
 
 const PokeCards = ({ pokemons, score, highScore, handleGame }) => {
 	return (
 		<>
-			<header className="flex justify-center gap-5">
-				<h2 className="text-2xl md:text-3xl">Score: {score}</h2>
-				<h2 className="text-2xl md:text-3xl">BestScore: {highScore}</h2>
+			<header className="text-shadow pt-10 flex justify-center gap-5 relative">
+				<div className="flex items-center  gap-4">
+					<h2 className="text-2xl md:text-4xl">Score: {score}</h2>
+					<h2 className="text-2xl md:text-4xl">BestScore: {highScore}</h2>
+				</div>
+				<div className="absolute right-5 top-[25%]">
+					<Link to="/">
+						<button className="transparent-bg shadow-lg px-[2rem] py-[1rem]  rounded-xl m-4 text-xl font-sans font-bold hover:scale-95 transition-all ease-in-out duration-200">
+							Give Up
+						</button>
+					</Link>
+				</div>
 			</header>
 			<div className="flex flex-wrap justify-around md:mt-10 ">
 				{pokemons.map((poke) => (
@@ -15,7 +26,9 @@ const PokeCards = ({ pokemons, score, highScore, handleGame }) => {
 						className={cardStyle}
 						onClick={() => handleGame(poke.id)}
 					>
-						<h1 className="text-[#22d3ee] text-sm md:text-xl">{poke.name}</h1>
+						<h1 className="text-[#fff] text-shadow text-sm md:text-xl">
+							{poke.name}
+						</h1>
 						<img
 							src={poke.imgSrc}
 							alt=""

@@ -1,5 +1,5 @@
 import Game from "./components/Game";
-import pokeBg from "./assets/bgLive/pokemon-emerald-title-screen-pixel-HD-live-wallpaper.mp4";
+import pokeBg from "./assets/bgLive/pokemon-emerald-waterfall-pixel-moewalls.com.mp4";
 import IntroScreen from "./components/IntroScreen";
 import { Route, Routes } from "react-router-dom";
 

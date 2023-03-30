@@ -18,15 +18,17 @@ const IntroScreen = () => {
 				</div>
 				<div>
 					<Link to="/game">
-						<button className="game-btn text-shadow">Play</button>
+						<button className="game-btn text-shadow  bg-indigo-500 hover:bg-indigo-600">
+							Play
+						</button>
 					</Link>
 					<Link to="/rule">
-						<button className="game-btn text-shadow bg-yellow-400">
+						<button className="game-btn text-shadow bg-yellow-400 hover:bg-yellow-500">
 							Rules
 						</button>
 					</Link>
 					<Link to="https://github.com/RazaNaqsh">
-						<button className="game-btn text-shadow bg-slate-700">
+						<button className="game-btn text-shadow bg-slate-700 hover:bg-slate-800">
 							Github
 						</button>
 					</Link>

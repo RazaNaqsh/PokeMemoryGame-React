@@ -32,4 +32,8 @@ body {
 
 .text-shadow {
   text-shadow: black 1px 0 10px;
+}
+
+.transparent-bg {
+  background-color: rgba(0, 0, 0, 0.5);
 }/*# sourceMappingURL=main.css.map */
