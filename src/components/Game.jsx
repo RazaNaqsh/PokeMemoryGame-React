@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Confetti from "react-confetti";
 import { pokemonData } from "../constants/pokemonData";
 import GameOver from "./GameOver";
 import PokeCards from "./PokeCards";
@@ -74,6 +75,7 @@ const Game = () => {
 			) : (
 				<GameOver handleClick={handleResetClick} />
 			)}
+			{gameOver && <Confetti />}
 		</section>
 	);
 };
