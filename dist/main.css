@@ -1,0 +1,35 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f172a;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.App {
+  position: relative;
+}
+
+.videoBg {
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+}
+
+.text-shadow {
+  text-shadow: black 1px 0 10px;
+}/*# sourceMappingURL=main.css.map */

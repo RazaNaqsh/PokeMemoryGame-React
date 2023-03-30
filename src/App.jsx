@@ -1,12 +1,32 @@
 import Game from "./components/Game";
+import pokeBg from "./assets/bgLive/pokemon-emerald-title-screen-pixel-HD-live-wallpaper.mp4";
+import IntroScreen from "./components/IntroScreen";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
 	return (
 		<div className="App">
-			<h1 className="text-center my-3 md:my-5 font-sans text-3xl md:text-4xl text-[#22d3ee]">
-				Welcome to PokeMatch
-			</h1>
-			<Game />
+			<video
+				className="videoBg"
+				autoPlay
+				loop
+				muted
+			>
+				<source
+					src={pokeBg}
+					type="video/mp4"
+				/>
+			</video>
+			<Routes>
+				<Route
+					path="/"
+					element={<IntroScreen />}
+				/>
+				<Route
+					path="/game"
+					element={<Game />}
+				/>
+			</Routes>
 		</div>
 	);
 }

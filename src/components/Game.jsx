@@ -63,7 +63,7 @@ const Game = () => {
 	};
 
 	return (
-		<section className="mt-10">
+		<section className="game">
 			{gameOver === false ? (
 				<PokeCards
 					pokemons={pokemons}
