@@ -7,7 +7,7 @@ const IntroScreen = () => {
 				<h1 className="text-shadow text-6xl font-extrabold  text-[#fff]">
 					Welcome to PokeMatch
 				</h1>
-				<p className="text-shadow text-right">Gotta Catch 'em All !!</p>
+				<p className="text-shadow text-right">Gotta Match 'em All !!</p>
 			</header>
 			<main className="flex flex-col items-center">
 				<div className="text-center mb-3">
@@ -22,7 +22,7 @@ const IntroScreen = () => {
 							Play
 						</button>
 					</Link>
-					<Link to="/rule">
+					<Link to="/rules">
 						<button className="game-btn text-shadow bg-yellow-400 hover:bg-yellow-500">
 							Rules
 						</button>

@@ -2,6 +2,7 @@ import Game from "./components/Game";
 import pokeBg from "./assets/bgLive/pokemon-emerald-waterfall-pixel-moewalls.com.mp4";
 import IntroScreen from "./components/IntroScreen";
 import { Route, Routes } from "react-router-dom";
+import Rules from "./components/Rules";
 
 function App() {
 	return (
@@ -25,6 +26,10 @@ function App() {
 				<Route
 					path="/game"
 					element={<Game />}
+				/>
+				<Route
+					path="/rules"
+					element={<Rules />}
 				/>
 			</Routes>
 		</div>
