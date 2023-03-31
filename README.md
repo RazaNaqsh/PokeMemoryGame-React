@@ -1,6 +1,7 @@
 # Project-PokeMemoryGame
 
-This is Pokemon Memory Game built using _React_ and _TailwindCss_
+This is Pokemon Memory Game built using _React_ , _TailwindCss_ and
+_FramerMotion_
 
 ### Live Preview:
 
@@ -13,4 +14,6 @@ https://pokememogame.netlify.app/
 - Event handling by child component
 - Conditionally render GameOver when max score reached
 - Made responsive using Tailwind breakpoints
+- Use framer motion to add nice animations
+- Routers to have different pages
 - First project deployed using netlify cli
