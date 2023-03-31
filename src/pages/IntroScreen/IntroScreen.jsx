@@ -15,7 +15,9 @@ const IntroScreen = () => {
 				<h1 className="text-shadow text-6xl font-extrabold  text-[#fff]">
 					Welcome to PokeMatch
 				</h1>
-				<p className="text-shadow text-right">Gotta Match 'em All !!</p>
+				<p className="text-shadow font-sans font-bold text-right">
+					Gotta Match 'em All !!
+				</p>
 			</header>
 			<main className="flex flex-col items-center">
 				<div className="text-center mb-3">
@@ -26,7 +28,7 @@ const IntroScreen = () => {
 				</div>
 				<div>
 					<Link to="/game">
-						<button className="game-btn text-shadow  bg-indigo-500 hover:bg-indigo-600">
+						<button className="game-btn  text-shadow  bg-indigo-500 hover:bg-indigo-600">
 							Play
 						</button>
 					</Link>

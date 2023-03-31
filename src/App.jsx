@@ -1,8 +1,8 @@
-import Game from "./components/Game";
 import pokeBg from "./assets/bgLive/pokemon-emerald-waterfall-pixel-moewalls.com.mp4";
-import IntroScreen from "./components/IntroScreen";
+import Game from "./components/Game/Game";
+import IntroScreen from "./components/IntroScreen/IntroScreen";
+import Rules from "./components/Rules/Rules";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Rules from "./components/Rules";
 import { AnimatePresence } from "framer-motion";
 
 function App() {

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Confetti from "react-confetti";
-import { pokemonData } from "../constants/pokemonData";
-import GameOver from "./GameOver";
-import PokeCards from "./PokeCards";
+import { pokemonData } from "../../constants/pokemonData";
+import GameOver from "../GameOver/GameOver";
+import PokeCards from "../PokeCards/PokeCards";
 
 function shuffle(array) {
 	let currentIndex = array.length,
