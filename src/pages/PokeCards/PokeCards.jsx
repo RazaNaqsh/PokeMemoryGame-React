@@ -77,7 +77,7 @@ const PokeCards = ({ pokemons, score, highScore, handleGame }) => {
 						<img
 							src={poke.imgSrc}
 							alt=""
-							className="h-[50px] w-[70px] sm:h-[80px] sm:w-[100px] object-contain md:h-auto md:w-auto"
+							className="h-[50px] w-[70px] sm:h-[80px] sm:w-[100px]  object-contain md:h-[250px] md:w-[250px]"
 						/>
 					</motion.div>
 				))}
